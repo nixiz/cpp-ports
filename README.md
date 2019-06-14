@@ -22,6 +22,7 @@ private:
 
 ### Declare Ports Definition in Class
 ```cpp
+// ClassA.h
 class ClassB; // associated classes can be forward declared.
 class ClassA
 {
@@ -32,9 +33,22 @@ public:
 };
 ```
 
+```cpp
+// ClassB.h
+class ClassA;
+class ClassB
+{
+  typedef Port<ClassB, ClassA> portA;
+public:
+  ClassB() = default;
+  ...
+};
+```
+
 ### Register Port with given `InType`
 
 ```cpp
+// ClassA.cpp
 ClassA::ClassA() 
 {
   PortBinder<portB::InType, portB::OutType>::Register(this);
@@ -42,3 +56,25 @@ ClassA::ClassA()
   REGISTER_PORT(portB);
 }
 ```
+```cpp
+// ClassB.cpp
+ClassB::ClassB() 
+{
+  REGISTER_PORT(portA);
+}
+```
+### Port Usage With Given Association
+
+Since Port structure holds the instances, classes are no more need to get associated instances. 
+
+```cpp
+// From ClassA instance to ClassB function call
+ClassA::foo() 
+{
+  portB::OutPtr()->bar();
+  // or use port with macro
+  PORT(portB)->bar();
+}
+```
+
+
