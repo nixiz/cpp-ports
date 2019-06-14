@@ -1,7 +1,7 @@
 # Ports for C++
 Ports is header-only library for creating and using associations between classes and interfaces. It can be used even with C++98 compilers.
 
-**Looking for demo? Go to [Demo Page](https://github.com/nixiz/cpp-ports/demo).**
+**Looking for demo? Go to [Demo Page](https://github.com/nixiz/cpp-ports/tree/master/demo/interface).**
 
 ## Port Structure and Usage
 
