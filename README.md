@@ -9,7 +9,7 @@ It can be used with C++98 compilers. -->
 erişilebilir hale gelmektedir. Bu sayede Sınıflar birbirlerine dolaylı olarak erişme imkanı
 bulurlar; bir sınıfı diğer sınıfa iletmeden bu işlem mümkün hale gelir. -->
 
-**For detailed examples please look [Demos Page](https://github.com/nixiz/cpp-ports/tree/master/demo).**
+**For detailed examples please look [Demos](https://github.com/nixiz/cpp-ports/tree/master/demo).**
 
 Port structure is simple template class that holds the pointers of given types. An object that registers itself with the Port class, it will becomes accessible over the target classes. This allows classes to access each others instance indirectly without sharing the instance.
 
