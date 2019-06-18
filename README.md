@@ -1,16 +1,17 @@
 # Ports for C++
 
-Ports is header-only library for creating and using associations between classes and interfaces. It can be used even with C++98 compilers. The port structure is simple template class that holds the pointers of given types.
-
-**Looking for demo? Go to [Demo Page](https://github.com/nixiz/cpp-ports/tree/master/demo/interface).**
+Ports for C++ is a header-only library for creating relations (associations) between classes without sharing their instances.
+<!-- Supports C++98 standards.
+It can be used with C++98 compilers. --> 
 
 ## Port Structure and Usage
-
 <!-- Port sınıfı ile kendini register eden bir nesne(instance), hedef port sınıfları üzerinden
 erişilebilir hale gelmektedir. Bu sayede Sınıflar birbirlerine dolaylı olarak erişme imkanı
 bulurlar; bir sınıfı diğer sınıfa iletmeden bu işlem mümkün hale gelir. -->
 
-An object that registers itself with the Port class, it will becomes accessible over the target classes. This allows classes to access each others instance indirectly without sharing the instance.
+**For detailed examples please look [Demos Page](https://github.com/nixiz/cpp-ports/tree/master/demo).**
+
+Port structure is simple template class that holds the pointers of given types. An object that registers itself with the Port class, it will becomes accessible over the target classes. This allows classes to access each others instance indirectly without sharing the instance.
 
 ```cpp
 template <class In, class Out>
