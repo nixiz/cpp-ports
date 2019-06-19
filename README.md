@@ -11,7 +11,7 @@ bulurlar; bir sınıfı diğer sınıfa iletmeden bu işlem mümkün hale gelir.
 
 **For detailed examples please look [Demos](https://github.com/nixiz/cpp-ports/tree/master/demo).**
 
-Port structure is simple template class that holds the pointers of given types. An object that registers itself with the Port class, it will becomes accessible over the target classes. This allows classes to access each others instance indirectly without sharing the instance.
+Port structure is a simple template class that holds the pointers of given types. After an object registers itself with the Port class, it will become accessible over the target classes. This allows classes to access each others instance indirectly without sharing the instance.
 
 ```cpp
 template <class In, class Out>
@@ -46,7 +46,7 @@ public:
 ```
 
 <!-- Bu bağın kurulabilmesi için 'ClassB' sınıfı da kendisini register edecek şekilde Port sınıfını tanımlar. -->
-To create this relation successfully Class B also needs to declare same port with opposite order with template types.
+To create this relation successfully Class B also needs to declare the same port with opposite order with template types.
 
 ```cpp
 // ClassB.h
