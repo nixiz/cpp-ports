@@ -87,13 +87,7 @@ class PortBinder<EmptyType, Out>
 public:
 	// Out register'lar için bir şey yapmaya gerek yok zaten ilgili
 	// port pair'i in tipindeki sınıf register ettiğinde oluşacaktır.
-	static void Register(void *) {
-		#if __cplusplus > 199711L 
-		static_assert(false, "cannot register out only ports!");
-		#else
-		// TODO(oguzhank): add static assert failure for C++98.
-		#endif
-	}
+	static void Register(void *) { }
 };
 
 #endif
